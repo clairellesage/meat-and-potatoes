@@ -1,0 +1,20 @@
+{
+  "name": "Meat and Potatoes",
+  "description": "Skip to ingredients",
+  "version": "2.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+      "matches": ["file:///*", "http://*/*", "https://*/*"],
+      "js":      ["usage.js"]
+  }],
+  "browser_action": {
+    "default_title": "Skip to ingredients"
+  },
+  "manifest_version": 2
+}
