@@ -8,8 +8,18 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
     if (msg.text && (msg.text == "report_back")) {
         /* Call the specified callback, passing 
            the web-pages DOM content as argument */
-	    var ingredients = document.querySelector("[id*=ingredients]").id
-	    // ingredients.scrollIntoView();
+      var ingredients = $('#ingredients')
+	    // var ingredients = document.querySelector("[id*=ingredients]").id
+	    // var ingredients = $("document:regex(id, .*sd.*)")
+
+	    // var ingredients = $(document)
+	    // 		.filter(function() {
+	    //         return this.id.match(/ingredient+s/);
+	    //     })
+	    //     .scrollIntoView()
+	    // ;
+	    window.location.hash = "#ingredients"
 		  sendResponse(ingredients);
+		  return true;
     }
 });

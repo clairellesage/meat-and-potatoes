@@ -11,7 +11,7 @@
   },
   "content_scripts": [{
       "matches": ["file:///*", "http://*/*", "https://*/*"],
-      "js":      ["usage.js"]
+      "js":      ["jquery.js", "usage.js"]
   }],
   "browser_action": {
     "default_title": "Skip to ingredients"
