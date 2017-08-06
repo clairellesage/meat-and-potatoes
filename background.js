@@ -9,9 +9,7 @@ var urlRegex = /^file:\/\/\/:?/;
 
 /* A function creator for callbacks */
 function doStuffWithDOM(element) {
-  if (element === "it's undefined"){
-    alert("I received the following DOM content:\n" + element);
-  }
+  alert("I received the following DOM content:\n" + element);
 }
 
 /* When the browser-action button is clicked... */
