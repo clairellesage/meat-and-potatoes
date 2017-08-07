@@ -8,8 +8,8 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
     if (msg.text && (msg.text == "report_back")) {
         /* Call the specified callback, passing 
            the web-pages DOM content as argument */
-      var ingredients = $('#ingredients')
-	    // var ingredients = document.querySelector("[id*=ingredients]").id
+      // var ingredients = $('#ingredients')
+	    var ingredientsQS = document.querySelector("[id*=ingredients]").id
 	    // var ingredients = $("document:regex(id, .*sd.*)")
 
 	    // var ingredients = $(document)
@@ -18,7 +18,16 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 	    //     })
 	    //     .scrollIntoView()
 	    // ;
-	    window.location.hash = "#ingredients"
+
+	    if ($('#ingredients').length > 0) {
+	    	window.location.hash = "#ingredients";
+	  	} else if (ingredientsQS != null) {
+	  		alert(ingredientsQS)
+	  		window.location.hash = ingredientsQS;
+	  	} else {
+	  		alert("error!")
+	  	}
+
 		  sendResponse(ingredients);
 		  return true;
     }
