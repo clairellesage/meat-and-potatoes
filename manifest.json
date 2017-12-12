@@ -1,6 +1,6 @@
 {
   "name": "Meat and Potatoes",
-  "description": "Skip to ingredients",
+  "description": "Skip to Ingredients!",
   "version": "2.0",
   "permissions": [
     "activeTab"
@@ -14,7 +14,7 @@
       "js":      ["jquery.js", "usage.js"]
   }],
   "browser_action": {
-    "default_title": "Skip to ingredients"
+    "default_title": "Skip to Ingredients!"
   },
   "manifest_version": 2
 }
