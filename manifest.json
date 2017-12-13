@@ -13,6 +13,7 @@
       "matches": ["file:///*", "http://*/*", "https://*/*"],
       "js":      ["jquery.js", "usage.js"]
   }],
+  "icons" : {"1": "icon.png"},
   "browser_action": {
     "default_title": "Skip to Ingredients!"
   },
