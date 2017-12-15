@@ -38,25 +38,24 @@ function findIngredients(tags) {
 	}
 }
 
-
-
-// var elements = document.querySelectorAll("*")
 var tags = document.getElementsByTagName("ul");
-// queryTypes = [elements, tags]
 
-findIngredients(tags)
-// scrollIt(tags)
+function clickPopup() {
+	var p = document.getElementById("skip");
+	p.onclick = findIngredients(tags)
+}
 
 
 
-// var elements = document.getElementsByTagName("*");
+
+
+// findIngredients(tags)
+
 // var elements = document.getElementsByClassName('*')
 // const elements = document.querySelector('*');
 
-// var tags = document.getElementsByTagName('*')
-// findIngredients(tags)
+// try selecting p tags in the case that people are assholes
+// var tags = document.getElementsByTagName('p')
 
-
+// select a specified id
 // const elm = document.querySelector('#Overview');
-
-// findIngredients(elm);

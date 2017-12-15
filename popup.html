@@ -1,23 +1,28 @@
 <!doctype html>
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>Meat N Potatoes</title>
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
       }
-      #status {
+      #hello #intro {
         /* avoid an excessively wide status text */
         white-space: pre;
         text-overflow: ellipsis;
         overflow: hidden;
-        max-width: 800px;
+        max-width: 2500px;
       }
     </style>
+    <script src="background.js"></script>
+    <script src="usage.js"></script>
+    <script src="popup.js"></script>
   </head>
   <body>
-    <div id="status">Status text</div>
+    <div id="intro">Click to skip to Ingredients</div>
+    <div id="hello">
+      <input id ="skip" type="submit">
+    </div>
   </body>
 </html>
-

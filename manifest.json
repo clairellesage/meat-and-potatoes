@@ -11,11 +11,15 @@
   },
   "content_scripts": [{
       "matches": ["file:///*", "http://*/*", "https://*/*"],
-      "js":      ["jquery.js", "usage.js"]
+      "js":      ["jquery.js", "usage.js", "popup.js"]
   }],
-  "icons" : {"1": "icon.png"},
+  "icons" : {
+    "48": "icon.png"
+  },
   "browser_action": {
-    "default_title": "Skip to Ingredients!"
+    "default_title": "Skip to Ingredients!",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   },
   "manifest_version": 2
 }
